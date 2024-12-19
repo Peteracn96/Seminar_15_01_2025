@@ -1,0 +1,178 @@
+%% LaTeX-Beamer template for 
+%% POLIMA at SDU
+%% by Christian
+%% based on the HU-TOP template by Julia Werra
+%%
+%% version 1.0
+%%
+%% Problems, bugs and comments to
+%% cwo@mci.sdu.dk
+
+\usepackage[greek,english]{babel}
+\usepackage{graphicx}
+\usepackage{wasysym}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage{xcolor,cancel}
+\usepackage[abs]{overpic}
+\usepackage{color}
+\usepackage{textpos}
+\usepackage{bibentry}
+\usepackage[font=scriptsize,format=plain,labelfont=bf,up,textfont=it,up]{caption} 
+\usepackage{dsfont}
+\usepackage[nodayofweek]{datetime}
+\usepackage{amsmath}
+\usepackage{animate}
+\usepackage[scaled=.80]{helvet}
+\usefonttheme[onlymath]{serif}
+
+\setbeamercovered{invisible}
+
+\setbeamersize{text margin left=6mm,text margin right=6mm} 
+
+\useinnertheme{rounded}
+\usecolortheme{polima}
+
+%save space in the footer
+%\beamer@compresstrue
+
+%title image and logo
+\def\titleimage#1{\def\@titleimage{#1}}
+\def\sdulogo#1{\def\@sdulogo{#1}}
+\def\sduinvlogo#1{\def\@sduinvlogo{#1}}
+\def\polimalogo#1{\def\@polimalogo{#1}}
+\def\polimalogofull#1{\def\@polimalogofull{#1}}
+
+\sdulogo{SDU_black.eps}
+\sduinvlogo{SDU_white.eps}
+\polimalogo{POLIMA_logo_cropped.eps}
+\polimalogofull{POLIMA_logo.eps}
+
+%CH: POLIMA bullet point
+\setbeamertemplate{itemize items}{
+\begin{pgfpicture}{-0.1ex}{-0.1ex}{.8ex}{.8ex}
+\pgfpathmoveto{\pgfpoint{0cm}{.8ex}} 
+\pgfpathlineto{\pgfpoint{.8ex}{.8ex}}
+\pgfpathlineto{\pgfpoint{.8ex}{0cm}}
+\pgfpathlineto{\pgfpoint{0cm}{0cm}}
+\color{polima-red100}
+\pgfusepath{fill}
+\end{pgfpicture}%
+}
+
+\setbeamertemplate{title page}
+{
+\thispagestyle{empty}
+
+\newcommand{\centerX}{16mm}
+
+%elements on title page
+
+%SDU Logo
+\begin{textblock*}{24mm}(4mm,3mm)
+\includegraphics[width=24mm]{\@sdulogo} 
+\end{textblock*}
+
+%POLIMA logo
+\begin{textblock*}{24mm}(130mm,3mm)
+\includegraphics[width=24mm]{\@polimalogofull} 
+\end{textblock*}
+
+%title
+\begin{textblock*}{120mm}(20mm,16mm)
+\begin{beamercolorbox}[wd=118mm,ht=14mm,dp=3mm,left]{white}%
+\Large\centering \textbf{\inserttitle}
+\end{beamercolorbox}
+\end{textblock*}
+
+%subtitle
+\begin{textblock*}{120mm}(\centerX,33mm)
+\small \centering \insertsubtitle
+\end{textblock*}
+
+%author
+\begin{textblock*}{120mm}(\centerX,43mm)
+\centering \insertauthor
+\end{textblock*}
+
+%affiliations
+\begin{textblock*}{120mm}(\centerX,53mm)
+\footnotesize\centering \insertinstitute
+\end{textblock*}
+
+%date
+\begin{textblock*}{120mm}(\centerX,70mm)
+\centering \insertdate
+\end{textblock*}
+
+%occasion
+\begin{textblock*}{120mm}(\centerX,77mm)
+\centering \occasion
+\end{textblock*}
+
+%home page 
+\begin{textblock*}{\paperwidth}(0mm,84.5mm)
+\begin{pgfpicture}{0mm}{0mm}{\paperwidth}{5.5mm}
+\color{polima-red100}
+\pgfpathrectangle{\pgfpoint{0mm}{0mm}}{\pgfpoint{\paperwidth}{5.5mm}}
+\pgfusepath{fill}
+\pgftext[at=\pgfpoint{2mm}{2mm},left,center]{\textcolor{white}{\fontsize{9pt}{9pt}\selectfont 
+POLIMA: Center for Polariton-driven Light-Matter Interactions}}
+\pgftext[at=\pgfpoint{125mm}{2mm},left,center]{\textcolor{white}{\fontsize{9pt}{9pt}\selectfont 
+https://www.polima.org}}
+\end{pgfpicture}
+\end{textblock*}
+}
+
+%frametitle
+\setbeamertemplate{frametitle}
+{
+\vspace{2.0mm} 
+\vbox{\hsize=120mm\bfseries\textcolor{polima-red100}{\fontsize{16pt}{16pt}\selectfont \insertframetitle}}
+
+\begin{textblock*}{18mm}(2mm,85.5mm)
+\includegraphics[width=12mm]{\@sduinvlogo} 
+\end{textblock*}
+
+%POLIMA logo
+\begin{textblock*}{20mm}(140mm,3.5mm)
+\includegraphics[width=16mm]{\@polimalogo} 
+\end{textblock*}
+}
+
+%box with reference from bibtex file
+%1st argument: shift in x-direction, 2nd argument: shift in y-direction, 3rd argument: width of box, 4th argument: key
+%after using a new key: pdf2latex -> bibtex filename (of .tex) in terminal -> pdf2latex
+\newcommand{\citebox}[4]{
+\par\vspace{#2}\hspace{#1}\colorbox{black!20}{\parbox[c]{#3}{\fontsize{7pt}{7pt}\selectfont\bibentry{#4}}\phantom{\cite{#4}}}
+}
+%necessary for ieeetr and books
+\def\newblock{\hskip .11em plus .33em minus .07em}
+
+\setbeamertemplate{headline}
+{
+}
+
+%footer
+\setbeamertemplate{footline}
+{
+\vskip.4mm
+%\begin{beamercolorbox}[ht=2.4mm, dp=3mm]{section in head/foot}
+	%include mini frame navigation
+	%\insertnavigation{\paperwidth}
+%\end{beamercolorbox}
+
+\renewcommand{\insertshorttitle}{Electrostatic screening in 2D semi.: an efficient atomistic imple.}
+
+\setbeamercolor{polima-footer}{fg=white,bg=polima-red100}
+\begin{beamercolorbox}[wd=20cm,ht=4.0mm,dp=1.5mm]{polima-footer}%
+ \fontsize{9pt}{9pt}\selectfont
+  \hspace{22mm}\insertshortauthor\hspace{0.5cm}\insertshorttitle
+\end{beamercolorbox}%
+\vspace*{-5.5mm}\hspace*{0.77\textwidth}%
+\begin{beamercolorbox}[wd=0.23\textwidth,ht=4.0mm,dp=1.5mm]{polima-footer}%
+ \fontsize{9pt}{9pt}\selectfont
+\hspace{0.6cm}\insertshortdate\hspace{0.5cm}\insertframenumber{}/\inserttotalframenumber
+\end{beamercolorbox}%
+}

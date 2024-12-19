@@ -1,0 +1,27 @@
+
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=blue!40!white,
+    level 1/.append style={level distance=3.5cm,sibling angle=120},
+    level 2/.append style={level distance=2.8cm,sibling angle=45},
+    level 3/.append style={level distance=2cm,sibling angle=40},
+    every annotation/.style={fill=red!20}]
+    \tikzset{every node/.append style={scale=0.8}}
+\node [concept] (dielefunc) { Diel. function 
+\begin{gather*}
+    \varepsilon(\vectormath{r},\vectormath{r}';t,t') \\
+                           \downarrow \mathcal{F}    \\
+    \varepsilon_{\vectormath{G},\vectormath{G}'}(\vectormath{q};\omega)
+\end{gather*}}
+    child [concept color = violet!60!white,grow=150] { node[alt=<{2}>{circular glow={fill=brass}}{}] (tdpt) {Self-consistent framework} }
+    child [grow=30] {
+    node[concept color = red!60!white,alt=<{4,5}>{circular glow={fill=brass}}{}] (mbpt) {MBPT} }
+    child [grow=-90] {
+    node[concept color = orange!60!white,alt=<{6,7}>{circular glow={fill=brass}}{}] (linres) {Linear response} };
+    \node [annotation,right,text width=5.2cm, minimum width = 5.2cm,visible on=<3->] at (tdpt.north east)
+        {\small "Electronic structure", Richard Martin};
+    \path (dielefunc) to[circle connection bar switch color=from (blue!40!white) to (red!60!white)] (mbpt);
+    \node [annotation,right,text width=8.cm, minimum width = 8.cm,visible on=<5->] at (mbpt.east)
+        {\small "Many-body quantum theory in condensed matter physics", Flensburg and Bruus};
+    \path (dielefunc) to[circle connection bar switch color=from (blue!40!white) to (orange!60!white)] (linres);
+    \node [annotation,right,text width=5.5cm, minimum width = 5.5cm,visible on=<7>] at (linres.south east)
+        {\small "Many-Particle Physics", Gerald Mahan};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Screening}{5}{0}{1}
+\beamer@subsectionintoc {1}{1}{Screening (what is it?)}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{The dielectric function}{12}{0}{1}
+\beamer@sectionintoc {2}{The screened potential}{25}{0}{2}
+\beamer@subsectionintoc {2}{1}{RPA polarizability: useful expressions}{26}{0}{2}
+\beamer@subsectionintoc {2}{2}{RPA dielectric function and screened potential}{34}{0}{2}
+\beamer@sectionintoc {3}{Dielectric function in the Tight-Binding approximation}{41}{0}{3}
+\beamer@subsectionintoc {3}{1}{Tight-Binding approximation}{42}{0}{3}
+\beamer@subsectionintoc {3}{2}{Dielectric function within TB}{51}{0}{3}
+\beamer@sectionintoc {4}{Numerical results}{56}{0}{4}
+\beamer@sectionintoc {5}{What is in order? Real space approach}{67}{0}{5}

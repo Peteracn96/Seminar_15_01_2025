@@ -1,0 +1,537 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  NEW COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Operators
+%
+\newcommand\dif{\mathrm{d}}
+\newcommand\grad{\boldsymbol{\nabla}}
+\newcommand\diver{\boldsymbol{\nabla} \cdot}
+\newcommand\curl{\boldsymbol{\nabla} \times}
+\newcommand\laplace{\boldsymbol{\nabla}^{2}}
+\newcommand\levi{\epsilon_{ijk}}
+\newcommand\trace{\mathrm{Tr}}
+%
+\newcommand{\deriv}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\partialderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\abssquare}[1]{\mathopen{}\left|#1\right|^{2}\mathclose{}}
+%
+% Vector: latin
+%
+\newcommand\avector{\mathbf{a}}
+\newcommand\bvector{\mathbf{b}}
+\newcommand\cvector{\mathbf{c}}
+\newcommand\dvector{\mathbf{d}}
+\newcommand\evector{\mathbf{e}}
+\newcommand\fvector{\mathbf{f}}
+\newcommand\gvector{\mathbf{g}}
+\newcommand\hvector{\mathbf{h}}
+\newcommand\ivector{\mathbf{i}}
+\newcommand\jvector{\mathbf{j}}
+\newcommand\kvector{\mathbf{k}}
+\newcommand\lvector{\mathbf{l}}
+\newcommand\mvector{\mathbf{m}}
+\newcommand\nvector{\mathbf{n}}
+\newcommand\ovector{\mathbf{o}}
+\newcommand\pvector{\mathbf{p}}
+\newcommand\qvector{\mathbf{q}}
+\newcommand\rvector{\mathbf{r}}
+\newcommand\svector{\mathbf{s}}
+\newcommand\tvector{\mathbf{t}}
+\newcommand\uvector{\mathbf{u}}
+\newcommand\vvector{\mathbf{v}}
+\newcommand\wvector{\mathbf{w}}
+\newcommand\xvector{\mathbf{x}}
+\newcommand\yvector{\mathbf{y}}
+\newcommand\zvector{\mathbf{z}}
+%
+\newcommand\Avector{\mathbf{A}}
+\newcommand\Bvector{\mathbf{B}}
+\newcommand\Cvector{\mathbf{C}}
+\newcommand\Dvector{\mathbf{D}}
+\newcommand\Evector{\mathbf{E}}
+\newcommand\Fvector{\mathbf{F}}
+\newcommand\Gvector{\mathbf{G}}
+\newcommand\Hvector{\mathbf{H}}
+\newcommand\Ivector{\mathbf{I}}
+\newcommand\Jvector{\mathbf{J}}
+\newcommand\Kvector{\mathbf{K}}
+\newcommand\Lvector{\mathbf{L}}
+\newcommand\Mvector{\mathbf{M}}
+\newcommand\Nvector{\mathbf{N}}
+\newcommand\Ovector{\mathbf{O}}
+\newcommand\Pvector{\mathbf{P}}
+\newcommand\Qvector{\mathbf{Q}}
+\newcommand\Rvector{\mathbf{R}}
+\newcommand\Svector{\mathbf{S}}
+\newcommand\Tvector{\mathbf{T}}
+\newcommand\Uvector{\mathbf{U}}
+\newcommand\Vvector{\mathbf{V}}
+\newcommand\Wvector{\mathbf{W}}
+\newcommand\Xvector{\mathbf{X}}
+\newcommand\Yvector{\mathbf{Y}}
+\newcommand\Zvector{\mathbf{Z}}
+%
+% Vectors: greek
+%
+\newcommand\alfvec{\boldsymbol{\alpha}}
+\newcommand\betvec{\boldsymbol{\beta}}
+\newcommand\gamvec{\boldsymbol{\gamma}}
+\newcommand\delvec{\boldsymbol{\delta}}
+\newcommand\epsvec{\boldsymbol{\epsilon}}
+\newcommand\zetvec{\boldsymbol{\zeta}}
+\newcommand\etavec{\boldsymbol{\eta}}
+\newcommand\thetvec{\boldsymbol{\theta}}
+\newcommand\iotvec{\boldsymbol{\iota}}
+\newcommand\kapvec{\boldsymbol{\kappa}}
+\newcommand\lamvec{\boldsymbol{\lambda}}
+\newcommand\muvec{\boldsymbol{\mu}}
+\newcommand\nuvec{\boldsymbol{\nu}}
+\newcommand\xivec{\boldsymbol{\xi}}
+\newcommand\pivec{\boldsymbol{\pi}}
+\newcommand\rhovec{\boldsymbol{\rho}}
+\newcommand\sigvec{\boldsymbol{\sigma}}
+\newcommand\tauvec{\boldsymbol{\tau}}
+\newcommand\upsvec{\boldsymbol{\upsilon}}
+\newcommand\phivec{\boldsymbol{\phi}}
+\newcommand\chivec{\boldsymbol{\chi}}
+\newcommand\psivec{\boldsymbol{\psi}}
+\newcommand\omvec{\boldsymbol{\omega}}
+%
+\newcommand\Gamvec{\boldsymbol{\Gamma}}
+\newcommand\Delvec{\boldsymbol{\Delta}}
+\newcommand\Thetvec{\boldsymbol{\Theta}}
+\newcommand\Lamvec{\boldsymbol{\Lambda}}
+\newcommand\Xivec{\boldsymbol{\Xi}}
+\newcommand\Pivec{\boldsymbol{\Pi}}
+\newcommand\Sigvec{\boldsymbol{\Sigma}}
+\newcommand\Upsvec{\boldsymbol{\Upsilon}}
+\newcommand\Phivec{\boldsymbol{\Phi}}
+\newcommand\Psivec{\boldsymbol{\Psi}}
+\newcommand\Omvec{\boldsymbol{\Omega}}
+%
+% Unit vectors: latin
+%
+\newcommand\aunit{\widehat{\mathbf{a}}}
+\newcommand\bunit{\widehat{\mathbf{b}}}
+\newcommand\cunit{\widehat{\mathbf{c}}}
+\newcommand\dunit{\widehat{\mathbf{d}}}
+\newcommand\eunit{\widehat{\mathbf{e}}}
+\newcommand\funit{\widehat{\mathbf{f}}}
+\newcommand\gunit{\widehat{\mathbf{g}}}
+\newcommand\hunit{\widehat{\mathbf{h}}}
+\newcommand\iunit{\widehat{\mathbf{i}}}
+\newcommand\junit{\widehat{\mathbf{j}}}
+\newcommand\kunit{\widehat{\mathbf{k}}}
+\newcommand\lunit{\widehat{\mathbf{l}}}
+\newcommand\munit{\widehat{\mathbf{m}}}
+\newcommand\nunit{\widehat{\mathbf{n}}}
+\newcommand\ounit{\widehat{\mathbf{o}}}
+\newcommand\punit{\widehat{\mathbf{p}}}
+\newcommand\qunit{\widehat{\mathbf{q}}}
+\newcommand\runit{\widehat{\mathbf{r}}}
+\newcommand\sunit{\widehat{\mathbf{s}}}
+\newcommand\tunit{\widehat{\mathbf{t}}}
+\newcommand\uunit{\widehat{\mathbf{u}}}
+\newcommand\vunit{\widehat{\mathbf{v}}}
+\newcommand\wunit{\widehat{\mathbf{w}}}
+\newcommand\xunit{\widehat{\mathbf{x}}}
+\newcommand\yunit{\widehat{\mathbf{y}}}
+\newcommand\zunit{\widehat{\mathbf{z}}}
+%
+\newcommand\Aunit{\widehat{\mathbf{A}}}
+\newcommand\Bunit{\widehat{\mathbf{B}}}
+\newcommand\Cunit{\widehat{\mathbf{C}}}
+\newcommand\Dunit{\widehat{\mathbf{D}}}
+\newcommand\Eunit{\widehat{\mathbf{E}}}
+\newcommand\Funit{\widehat{\mathbf{F}}}
+\newcommand\Gunit{\widehat{\mathbf{G}}}
+\newcommand\Hunit{\widehat{\mathbf{H}}}
+\newcommand\Iunit{\widehat{\mathbf{I}}}
+\newcommand\Junit{\widehat{\mathbf{J}}}
+\newcommand\Kunit{\widehat{\mathbf{K}}}
+\newcommand\Lunit{\widehat{\mathbf{L}}}
+\newcommand\Munit{\widehat{\mathbf{M}}}
+\newcommand\Nunit{\widehat{\mathbf{N}}}
+\newcommand\Ounit{\widehat{\mathbf{O}}}
+\newcommand\Punit{\widehat{\mathbf{P}}}
+\newcommand\Qunit{\widehat{\mathbf{Q}}}
+\newcommand\Runit{\widehat{\mathbf{R}}}
+\newcommand\Sunit{\widehat{\mathbf{S}}}
+\newcommand\Tunit{\widehat{\mathbf{T}}}
+\newcommand\Uunit{\widehat{\mathbf{U}}}
+\newcommand\Vunit{\widehat{\mathbf{V}}}
+\newcommand\Wunit{\widehat{\mathbf{W}}}
+\newcommand\Xunit{\widehat{\mathbf{X}}}
+\newcommand\Yunit{\widehat{\mathbf{Y}}}
+\newcommand\Zunit{\widehat{\mathbf{Z}}}
+%
+% Unit vectors: greek
+%
+\newcommand\alfunit{\widehat{\boldsymbol{\alpha}}}
+\newcommand\betunit{\widehat{\boldsymbol{\beta}}}
+\newcommand\gamunit{\widehat{}\boldsymbol{\gamma}}
+\newcommand\delunit{\widehat{\boldsymbol{\delta}}}
+\newcommand\epsunit{\widehat{\boldsymbol{\epsilon}}}
+\newcommand\zetunit{\widehat{\boldsymbol{\zeta}}}
+\newcommand\etaunit{\widehat{\boldsymbol{\eta}}}
+\newcommand\thetunit{\widehat{\boldsymbol{\theta}}}
+\newcommand\iotunit{\widehat{\boldsymbol{\iota}}}
+\newcommand\kapunit{\widehat{\boldsymbol{\kappa}}}
+\newcommand\lamunit{\widehat{\boldsymbol{\lambda}}}
+\newcommand\muunit{\widehat{\boldsymbol{\mu}}}
+\newcommand\nuunit{\widehat{\boldsymbol{\nu}}}
+\newcommand\xiunit{\widehat{\boldsymbol{\xi}}}
+\newcommand\piunit{\widehat{\boldsymbol{\pi}}}
+\newcommand\rhounit{\widehat{\boldsymbol{\rho}}}
+\newcommand\sigunit{\widehat{\boldsymbol{\sigma}}}
+\newcommand\tauunit{\widehat{\boldsymbol{\tau}}}
+\newcommand\upsunit{\widehat{\boldsymbol{\upsilon}}}
+\newcommand\phiunit{\widehat{\boldsymbol{\phi}}}
+\newcommand\chiunit{\widehat{\boldsymbol{\chi}}}
+\newcommand\psiunit{\widehat{\boldsymbol{\psi}}}
+\newcommand\omunit{\widehat{\boldsymbol{\omega}}}
+%
+\newcommand\Gamunit{\widehat{\boldsymbol{\Gamma}}}
+\newcommand\Delunit{\widehat{\boldsymbol{\Delta}}}
+\newcommand\Thetunit{\widehat{\boldsymbol{\Theta}}}
+\newcommand\Lamunit{\widehat{\boldsymbol{\Lambda}}}
+\newcommand\Xiunit{\widehat{\boldsymbol{\Xi}}}
+\newcommand\Piunit{\widehat{\boldsymbol{\Pi}}}
+\newcommand\Sigunit{\widehat{\boldsymbol{\Sigma}}}
+\newcommand\Upsunit{\widehat{\boldsymbol{\Upsilon}}}
+\newcommand\Phiunit{\widehat{\boldsymbol{\Phi}}}
+\newcommand\Psiunit{\widehat{\boldsymbol{\Psi}}}
+\newcommand\Omunit{\widehat{\boldsymbol{\Omega}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Roman fonts
+%
+\newcommand\arm{\mathrm{a}}
+\newcommand\brm{\mathrm{b}}
+\newcommand\crm{\mathrm{c}}
+\newcommand\drm{\mathrm{d}}
+\newcommand\erm{\mathrm{e}}
+\newcommand\frm{\mathrm{f}}
+\newcommand\grm{\mathrm{g}}
+\newcommand\hrm{\mathrm{h}}
+\newcommand\irm{\mathrm{i}}
+\newcommand\jrm{\mathrm{j}}
+\newcommand\krm{\mathrm{k}}
+\newcommand\lrm{\mathrm{l}}
+\newcommand\mrm{\mathrm{m}}
+\newcommand\nrm{\mathrm{n}}
+\newcommand\orm{\mathrm{o}}
+\newcommand\prm{\mathrm{p}}
+\newcommand\qrm{\mathrm{q}}
+\newcommand\rrm{\mathrm{r}}
+\newcommand\srm{\mathrm{s}}
+\newcommand\trm{\mathrm{t}}
+\newcommand\urm{\mathrm{u}}
+\newcommand\vrm{\mathrm{v}}
+\newcommand\wrm{\mathrm{w}}
+\newcommand\xrm{\mathrm{x}}
+\newcommand\yrm{\mathrm{y}}
+\newcommand\zrm{\mathrm{z}}
+%
+\newcommand\Arm{\mathrm{A}}
+\newcommand\Brm{\mathrm{B}}
+\newcommand\Crm{\mathrm{C}}
+\newcommand\Drm{\mathrm{D}}
+\newcommand\Erm{\mathrm{E}}
+\newcommand\Frm{\mathrm{F}}
+\newcommand\Grm{\mathrm{G}}
+\newcommand\Hrm{\mathrm{H}}
+\newcommand\Irm{\mathrm{I}}
+\newcommand\Jrm{\mathrm{J}}
+\newcommand\Krm{\mathrm{K}}
+\newcommand\Lrm{\mathrm{L}}
+\newcommand\Mrm{\mathrm{M}}
+\newcommand\Nrm{\mathrm{N}}
+\newcommand\Orm{\mathrm{O}}
+\newcommand\Prm{\mathrm{P}}
+\newcommand\Qrm{\mathrm{Q}}
+\newcommand\Rrm{\mathrm{R}}
+\newcommand\Srm{\mathrm{S}}
+\newcommand\Trm{\mathrm{T}}
+\newcommand\Urm{\mathrm{U}}
+\newcommand\Vrm{\mathrm{V}}
+\newcommand\Wrm{\mathrm{W}}
+\newcommand\Xrm{\mathrm{X}}
+\newcommand\Yrm{\mathrm{Y}}
+\newcommand\Zrm{\mathrm{Z}}
+%
+\newcommand\oned{\mathrm{1D}}
+\newcommand\twod{\mathrm{2D}}
+\newcommand\threed{\mathrm{3D}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Complex analysis
+%
+\newcommand\ci{\mathrm{i}}
+\newcommand\real{\mathrm{Re}}
+\newcommand\imag{\mathrm{Im}}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Response functions etc
+%
+\newcommand\homega{\hbar \omega}
+\newcommand\hgamma{\hbar \gamma}
+\newcommand\omnought{\omega_{0}}
+\newcommand\homnought{\hbar \omega_{0}}
+%
+\newcommand\lambdap{\lambda_{\mathrm{p}}}
+\newcommand\omegap{\omega_{\mathrm{p}}}
+\newcommand\homegap{\hbar \omega_{\mathrm{p}}}
+\newcommand\gammap{\gamma_{\mathrm{p}}}
+\newcommand\hgammap{\hbar \gamma_{\mathrm{p}}}
+%
+\newcommand\omegax{\omega_{\mathrm{x}}}
+\newcommand\homegax{\hbar \omega_{\mathrm{x}}}
+\newcommand\gammax{\gamma_{\mathrm{x}}}
+\newcommand\hgammax{\hbar \gamma_{\mathrm{x}}}
+%
+\newcommand\omegaplus{\omega_{+}}
+\newcommand\homegaplus{\hbar \omega_{+}}
+\newcommand\omegamin{\omega_{-}}
+\newcommand\homegamin{\hbar \omega_{-}}
+\newcommand\homegadif{\hbar \Omega}
+%
+\newcommand\vfermi{\nu_{\mathrm{F}}}
+\newcommand\vel{\nu_{\mathrm{el}}}
+\newcommand\velvec{\boldsymbol{\nu}_{\mathrm{el}}}
+\newcommand\mel{m_{\mathrm{e}}}
+\newcommand\rwigner{r_{\mathrm{s}}}
+%
+\newcommand\dperp{d_{\perp}}
+\newcommand\dpar{d_{\parallel}}
+%
+\newcommand\eps{\varepsilon}
+\newcommand\epsone{\varepsilon_{1}}
+\newcommand\epstwo{\varepsilon_{2}}
+\newcommand\epsnought{\varepsilon_{0}}
+\newcommand\epsinf{\varepsilon_{\infty}}
+\newcommand\epsinfexp{\varepsilon_{\infty,\mathrm{exp}}}
+\newcommand\epseff{\varepsilon_{\mathrm{eff}}}
+\newcommand\etensor{\boldsymbol{\varepsilon}}
+%
+\newcommand\muone{\mu_{1}}
+\newcommand\mutwo{\mu_{2}}
+\newcommand\munought{\mu_{0}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Scattering
+%
+% cross sections
+%
+\newcommand\sigmaext{\sigma_{\mathrm{ext}}}
+\newcommand\sigmascat{\sigma_{\mathrm{scat}}}
+\newcommand\sigmaabs{\sigma_{\mathrm{abs}}}
+\newcommand\sigmageom{\sigma_{\mathrm{geom}}}
+%
+% angles of incidence, reflection, refraction, dipoles
+%
+\newcommand\thetai{\theta_{\mathrm{i}}}
+\newcommand\thetar{\theta_{\mathrm{r}}}
+\newcommand\thetat{\theta_{\mathrm{t}}}
+\newcommand\thetad{\theta_{\mathrm{d}}}
+\newcommand\phid{\phi_{\mathrm{d}}}
+%
+% Bessel functions
+%
+\newcommand\jell{j_{\ell}}
+\newcommand\jellc{j_{\ell}^{\ast}}
+\newcommand\jellp{j_{\ell}^{'}}
+\newcommand\nell{n_{\ell}}
+\newcommand\nellp{n_{\ell}^{'}}
+\newcommand\hell{h_{\ell}^{+}}
+\newcommand\hellc{h_{\ell}^{+\ast}}
+\newcommand\hellp{h_{\ell}^{+'}}
+\newcommand\Jderiv{\mathrm{J}_{\ell}}
+\newcommand\Jderivc{\mathrm{J}_{\ell}^{\ast}}
+\newcommand\Hderiv{\mathrm{H}_{\ell}}
+\newcommand\Hderivc{\mathrm{H}_{\ell}^{\ast}}
+%
+% spherical harmonics
+%
+\newcommand\lmax{\ell_{\mathrm{max}}}
+\newcommand\lm{\ell m}
+\newcommand\lmprime{\ell' m'}
+\newcommand\lmprimes{\ell'' m''}
+\newcommand\suml{\sum_{\ell = 1}^{+\infty}}
+\newcommand\sumlm{\sum_{\ell = 1}^{+\infty} \sum_{m = -\ell}^{\ell} }
+\newcommand\sumlmprime{\sum_{\ell' m'}}
+\newcommand\ylm{Y_{\ell m}}
+\newcommand\ylmast{Y_{\ell m}^{\ast}}
+\newcommand\ylmprime{Y_{\ell' m'}}
+\newcommand\ylmprimeast{Y_{\ell' m'}^{\ast}}
+\newcommand\xlm{\mathbf{X}_{\ell m}}
+\newcommand\xlmast{\mathbf{X}_{\ell m}^{\ast}}
+\newcommand\xlmprime{\mathbf{X}_{\ell' m'}}
+\newcommand\xlmprimeast{\mathbf{X}_{\ell' m'}^{\ast}}
+%
+% Incoming and scattering fields & amplitudes
+%
+\newcommand\escat{\mathbf{E}_{\mathrm{sc}}}
+\newcommand\ein{\mathbf{E}_{\mathrm{in}}}
+\newcommand\enought{\mathbf{E}_{0}}
+%
+\newcommand\aelm{a_{E\ell m}}
+\newcommand\ahlm{a_{H\ell m}}
+\newcommand\aelmprimeast{a_{E\ell' m'}^{\ast}}
+\newcommand\ahlmprimeast{a_{H\ell' m'}^{\ast}}
+\newcommand\aelmo{a_{E\ell m}^{0}}
+\newcommand\ahlmo{a_{H\ell m}^{0}}
+\newcommand\aelmin{a_{E\ell m}^{\mathrm{in}}}
+\newcommand\allmin{a_{L\ell m}^{\mathrm{in}}}
+\newcommand\ahlmin{a_{H\ell m}^{\mathrm{in}}}
+\newcommand\aelmp{a_{E\ell m}^{+}}
+\newcommand\ahlmp{a_{H\ell m}^{+}}
+\newcommand\aelme{a_{E\ell m}^{e}}
+\newcommand\ahlme{a_{H\ell m}^{e}}
+\newcommand\aelmpast{a_{E\ell m}^{+\ast}}
+\newcommand\ahlmpast{a_{H\ell m}^{+\ast}}
+\newcommand\aelmpprimeast{a_{E\ell' m'}^{+\ast}}
+\newcommand\ahlmpprimeast{a_{H\ell' m'}^{+\ast}}
+\newcommand\aelminone{a_{E\ell m}^{1\mathrm{in}}}
+\newcommand\ahlminone{a_{H\ell m}^{1\mathrm{in}}}
+\newcommand\aelminoneast{a_{E\ell m}^{1\mathrm{in} \ast}}
+\newcommand\ahlminoneast{a_{H\ell m}^{1\mathrm{in} \ast}}
+\newcommand\aelminoneprimeast{a_{E\ell' m'}^{1\mathrm{in} \ast}}
+\newcommand\ahlminoneprimeast{a_{H\ell' m'}^{1\mathrm{in} \ast}}
+\newcommand\aelmintwo{a_{E\ell m}^{2\mathrm{in}}}
+\newcommand\ahlmintwo{a_{H\ell m}^{2\mathrm{in}}}
+\newcommand\allmintwo{a_{L\ell m}^{2\mathrm{in}}}
+\newcommand\aelmptwo{a_{E\ell m}^{2+}}
+\newcommand\ahlmptwo{a_{H\ell m}^{2+}}
+\newcommand\allmptwo{a_{L\ell m}^{2+}}
+%
+\newcommand\delmo{d_{E\ell m}^{0}}
+\newcommand\dhlmo{d_{H\ell m}^{0}}
+\newcommand\delmoast{d_{E\ell m}^{0\ast}}
+\newcommand\dhlmoast{d_{H\ell m}^{0\ast}}
+\newcommand\delmoprimeast{d_{E\ell' m'}^{0\ast}}
+\newcommand\dhlmoprimeast{d_{H\ell' m'}^{0\ast}}
+\newcommand\delmp{d_{E\ell m}^{+}}
+\newcommand\dhlmp{d_{H\ell m}^{+}}
+\newcommand\delmpast{d_{E\ell m}^{+\ast}}
+\newcommand\dhlmpast{d_{H\ell m}^{+\ast}}
+\newcommand\delmpprimeast{d_{E\ell' m'}^{+\ast}}
+\newcommand\dhlmpprimeast{d_{H\ell' m'}^{+\ast}}
+%
+% Dipoles
+%
+\newcommand\pd{\mathbf{p}_{\mathrm{d}}}
+\newcommand\ppd{p_{\mathrm{d}}}
+\newcommand\rd{\mathbf{r}_{\mathrm{d}}}
+\newcommand\rrd{r_{\mathrm{d}}}
+%
+\newcommand\omegaem{\omega_{\mathrm{em}}}
+\newcommand\homegaem{\hbar \omega_{\mathrm{em}}}
+\newcommand\gammaem{\gamma_{\mathrm{em}}}
+\newcommand\hgammaem{\habr \gamma_{\mathrm{em}}}
+\newcommand\omegaexc{\omega_{\mathrm{exc}}}
+\newcommand\homegaexc{\hbar \omega_{\mathrm{exc}}}
+\newcommand\gammaexc{\gamma_{\mathrm{exc}}}
+\newcommand\hgammaexc{\habr \gamma_{\mathrm{exc}}}
+%
+\newcommand\gammad{\gamma_{\mathrm{d}}}
+\newcommand\gammar{\gamma_{\mathrm{r}}}
+\newcommand\gammanr{\gamma_{\mathrm{nr}}}
+\newcommand\gammaemnorm{\gamma_{\mathrm{em}}/\gamma_{\mathrm{em}}^{0}}
+\newcommand\gammaexcnorm{\gamma_{\mathrm{exc}}/\gamma_{\mathrm{exc}}^{0}}
+\newcommand\yieldnorm{q/q^{0}}
+\newcommand\taur{\tau_{\mathrm{r}}}
+\newcommand\taunr{\tau_{\mathrm{nr}}}
+\newcommand\Prad{P_{\mathrm{r}}}
+\newcommand\Pnr{P_{\mathrm{nr}}}
+\newcommand\Pnought{P_{0}}
+%
+%
+% parallel vectors
+%
+\newcommand\kparallel{\mathbf{k}_{\parallel}}
+\newcommand\qparallel{\mathbf{q}_{\parallel}}
+\newcommand\rparallel{\mathbf{r}_{\parallel}}
+%
+% 
+% Quantum mechanics
+%
+\newcommand\hbarkin{-\frac{\hbar^{2}}{2m}}
+\newcommand\coulomb{\frac{e^{2}}{4 \pi \epsnought}}
+\newcommand\hamilton{\mathcal{H}}
+\newcommand\potential{\mathcal{V}}
+\newcommand\parity{\mathcal{P}}
+\newcommand\pt{\mathcal{PT}}
+\newcommand\rotate{\mathcal{R}}
+\newcommand\Lsq{\hat{L}^{2}}
+\newcommand\Lsqdag{\hat{L}^{2\dagger}}
+\newcommand\Lz{\hat{L}_{z}}
+\newcommand\Li{\hat{L}_{i}}
+\newcommand\Lplus{\hat{L}_{+}}
+\newcommand\Lmin{\hat{L}_{-}}
+\newcommand\Lpm{\hat{L}_{\pm}}
+%
+\newcommand\ahat{\hat{\mathbf{a}}}
+\newcommand\ahatdag{\hat{\mathbf{a}}^{\dag}}
+\newcommand\bhat{\hat{\mathbf{b}}}
+\newcommand\bhatdag{\hat{\mathbf{b}}^{\dag}}
+\newcommand\fhat{\hat{\mathbf{f}}}
+\newcommand\fhatdag{\hat{\mathbf{f}}^{\dag}}
+%
+\newcommand\upket{\ket{\uparrow}}
+\newcommand\dket{\ket{\downarrow}}
+\newcommand\upbra{\bra{\uparrow}}
+\newcommand\dbra{\bra{\downarrow}}
+\newcommand{\upupket}{\ket{\uparrow \uparrow}}
+\newcommand{\ddket}{\ket{\downarrow \downarrow}}
+\newcommand{\updket}{\ket{\uparrow \downarrow}}
+\newcommand{\dupket}{\ket{\downarrow \uparrow}}
+\newcommand{\updbra}{\bra{\uparrow \downarrow}}
+\newcommand{\dupbra}{\bra{\downarrow \uparrow}}
+%
+%
+% Electrostatics
+%
+\newcommand\kel{\frac{1}{4 \pi \epsnought}}
+\newcommand\fourpie{4 \pi \epsnought}
+\newcommand\mufourpi{\frac{\munought}{4 \pi}}
+%
+% Statistical physics
+%
+\newcommand\kbt{k_{\mathrm{B}}T}
+
+%My own vectors
+
+\newcommand{\nullvector}{\mathbf{0}}
+
+%position vector -> r in bold
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\bp}{\mathbf{p}}
+
+%Commands for tikz Feynamn diagrams
+\tikzset{
+    every node/.append style={font=\small},
+    every edge/.append style={thick},
+    arrow/.style={thick, shorten >=5pt,shorten <=5pt,->},
+    photon/.style={dashed,dash phase=3pt,postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[]{latex}}}},
+    electron/.style={postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[]{latex}}}},
+    fullprop/.style={double,postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[]{latex}}}},
+    bareprop/.style={postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[]{latex}}}},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF NEW COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%

@@ -1,0 +1,137 @@
+%null vector
+\newcommand{\bzero}{\vb{0}}
+
+%tensor 
+\newcommand*{\rttensor}[1]{\overline{\overline{#1}}}
+
+%Form of shwoing a vector
+
+\def\bm#1{\mathchoice                             % math bold
+  {\mbox{\boldmath$\displaystyle#1$}}%
+  {\mbox{\boldmath$#1$}}%
+  {\mbox{\boldmath$\scriptstyle#1$}}%
+  {\mbox{\boldmath$\scriptscriptstyle#1$}}}
+  
+\newcommand{\vectormath}[1]{{\bm{#1}}}
+
+%Direct Bravais lattice vector
+\newcommand{\bR}{\vectormath{R}}
+
+%Exciton momentum
+\newcommand{\bQ}{\vb{Q}}
+
+%Vector of the motif of the unit cell/Vector of the basis within the unit cell
+\newcommand{\bt}{\vectormath{t}}
+
+%reciprocal lattice vectors
+\newcommand{\bb}{\vb{b}}
+
+%Vectors of the reciprocal lattice (basis)
+%\newcommand{\bG}{\vb{G}}
+\newcommand{\bG}{\vectormath{G}}
+
+
+%normal vector -> n in bold
+\newcommand{\bn}{\vb{n}}
+
+%position vector -> r,x,y in bold
+%\newcommand{\br}{\vb{r}}
+\newcommand{\br}{\vectormath{r}}
+
+%\newcommand{\bx}{\vb{x}}
+\newcommand{\bx}{\vectormath{x}}
+
+%\newcommand{\by}{\vb{y}}
+\newcommand{\by}{\vectormath{y}}
+
+%Electric field vector -> E in bold
+\newcommand{\bE}{\vb{E}}
+
+%Potential vector -> A in bold
+\newcommand{\bA}{\vb{A}}
+
+%Potential vecotr with hat for operator
+\newcommand{\hA}{\hat{\vb{A}}}
+\newcommand{\nhA}{\vb{A}} %In case I want to remove the hat and recover it back again
+
+%Magnetic induction field vector -> B in bold
+\newcommand{\bB}{\vb{B}}
+
+%Electric displacement vector -> D in bold
+\newcommand{\bD}{\vb{D}}
+
+%Magnetic field vector -> H in bold
+\newcommand{\bH}{\vb{H}}
+
+%Current density vector -> J in bold
+\newcommand{\bJ}{\vb{J}}
+
+%Sheet current vector -> j in bold
+\newcommand{\bj}{\vb{j}}
+
+%Polarization density vector -> P in bold
+\newcommand{\bP}{\vb{P}}
+
+%Wave vector
+% \newcommand{\bk}{\vb{k}}
+% \newcommand{\bq}{\vb{q}}
+% \newcommand{\bp}{\vb{p}}
+\newcommand{\bk}{\vectormath{k}}
+\newcommand{\bq}{\vectormath{q}}
+\newcommand{\bp}{\vectormath{p}}
+
+%Corners of graphene Brillouin zone
+\newcommand{\bK}{\vb{K}}
+
+%x, y and z versors
+\newcommand{\bex}{\vb{e}_x}
+\newcommand{\bey}{\vb{e}_y}
+\newcommand{\bez}{\vb{e}_z}
+
+\newcommand{\bux}{\vb{u}_x}
+\newcommand{\buy}{\vb{u}_y}
+\newcommand{\buz}{\vb{u}_z}
+
+%Unit vector for any polarization
+\newcommand{\bhe}{\hat{\vb{e}}}
+
+%small electric and magnetic fields
+\newcommand{\be}{\vb{e}}
+%\newcommand{\bb}{\vb{b}} already defined
+
+%Imaginary unit
+\newcommand{\ii}{\mathrm{i}}
+
+%Exponential/euler number
+\newcommand{\ee}{\mathrm{e}}
+
+%TM and TE modes in math mode
+\newcommand{\TE}{\mathrm{TE}}
+\newcommand{\TM}{\mathrm{TM}}
+
+%creation operators
+\newcommand{\adagger}{a^{\dagger}}
+\newcommand{\bdagger}{b^{\dagger}}
+\newcommand{\cdagger}{c^{\dagger}}
+
+%ket and bra shortcut
+%\newcommand{\ket}[1]{|#1\rangle}
+
+% hbar omega
+\newcommand{\hw}{\hbar \omega}
+
+% d for integrals
+\newcommand{\dif}[1][]{\dd^{#1}}
+
+% differential for real space integrals
+%\newcommand{\dr}{\dd^3 r}
+\newcommand{\dr}[1][]{\dif[#1] \vectormath{r}}
+
+%\newcommand{\dx}{\dd^3 x}
+\newcommand{\dx}[1][]{\dif[#1] \vectormath{x}}
+
+%\newcommand{\dy}{\dd^3 y}
+\newcommand{\dy}[1][]{\dif[#1] \vectormath{y}}
+
+%GW for the approximation, either italic or not
+\newcommand{\GW}{\textit{GW}}
